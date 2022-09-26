@@ -18,15 +18,18 @@ namespace Library.ConsoleApp
                 case "L":
                     SearchHelper.DisplaySearchResults(books);
                     var selection = GetBookNumberSelection();
-                    bookLibrary.Remove(books.ElementAt(selection-1));
-                    Console.WriteLine("Your book was removed successfully!");
+                    if (selection <= books.Count() && GetDeleteConfirmation(books.ElementAt(selection - 1)))
+                    {
+                        bookLibrary.Remove(books.ElementAt(selection - 1));
+                        Console.WriteLine("Your book was removed successfully!");
+                    }
                     break;
                 case "S":
                     while (true)
                     {
                         var searchResults = SearchHelper.Search(books);
                         SearchHelper.DisplaySearchResults(searchResults);
-                        if (searchResults.Count() == 1)
+                        if (searchResults.Count() == 1 && GetDeleteConfirmation(searchResults.First()))
                         {
                             books.Remove(searchResults.First());
                             Console.WriteLine("Your book was removed successfully!");
@@ -73,6 +76,23 @@ namespace Library.ConsoleApp
                 if(int.TryParse(input, out int result))
                 {
                     return result;
+                }
+            }
+        }
+
+        private static bool GetDeleteConfirmation(Book book)
+        {
+            while (true)
+            {
+                Console.WriteLine($"Are you sure you want to delete {book.ToString()} [Y/N]?");
+                switch (Console.ReadLine().ToUpper())
+                {
+                    case "Y":
+                        return true;
+                    case "N":
+                        return false;
+                    default:
+                        break;
                 }
             }
         }

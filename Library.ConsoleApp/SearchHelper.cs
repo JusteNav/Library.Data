@@ -58,6 +58,7 @@ namespace Library.ConsoleApp
 
         public static void DisplaySearchResults(IEnumerable<Book> results)
         {
+            Console.WriteLine("Results:");
             for (int i = 0; i < results.Count(); i++)
             {
                 Console.WriteLine($"{i + 1}. {results.ElementAt(i).ToString()}");
