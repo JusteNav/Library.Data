@@ -44,7 +44,7 @@ namespace Library.ConsoleApp
             var keywords = new List<string>();
 
             Console.WriteLine("Please add some keywords");
-            Console.WriteLine("------------------------");
+            Console.WriteLine(Menu.Dash);
 
             while (true)
             {
@@ -72,7 +72,7 @@ namespace Library.ConsoleApp
             var authors = new List<Author>();
 
             Console.WriteLine("Please add authors");
-            Console.WriteLine("------------------------");
+            Console.WriteLine(Menu.Dash);
 
             while (true)
             {

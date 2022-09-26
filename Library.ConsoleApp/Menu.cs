@@ -8,14 +8,17 @@ namespace Library.ConsoleApp
 {
     internal static class Menu
     {
+        public static readonly string Dash = "------------------------";
         internal static string GetUserMenuSelection()
         {
             while(true)
             {
+                Console.WriteLine(Dash);
                 Console.WriteLine("1 - Add book [A]");
                 Console.WriteLine("2 - Remove book [R]");
                 Console.WriteLine("3 - Search book [S]");
                 Console.WriteLine("4 - Exit [E]");
+                Console.WriteLine(Dash);
 
                 Console.Write("Pick menu item: ");
 

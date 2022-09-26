@@ -18,8 +18,10 @@ namespace Library.ConsoleApp
                         AddBookUIHelper.Start(bookLibrary);
                         break;
                     case "R":
+                        RemoveBookUIHelper.Start(bookLibrary);
                         break;
                     case "S":
+                        SearchHelper.Start(bookLibrary);
                         break;
                     case "E":
                         return;

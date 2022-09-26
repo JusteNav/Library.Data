@@ -14,7 +14,9 @@ namespace Library.Data
         }
 
         private List<Book> _books = new List<Book>();
-        
+
+        public List<Book> Books { get { return _books; } }
+
         public void Add(Book book)
         {
             _books.Add(book);
@@ -25,10 +27,6 @@ namespace Library.Data
             _books.Remove(book);
         }
 
-        public IEnumerable<Book> Search(string query)
-        {
-            return _books.Where(b => b.Title.Contains(query, StringComparison.InvariantCultureIgnoreCase));
-        }
 
         private void Load()
         {
