@@ -71,7 +71,7 @@ namespace Library.ConsoleApp
         {
             while (true)
             {
-                Console.Write("Pick a number of the book you want to delete: ");
+                Console.Write("Enter a number of the book you want to delete: ");
                 var input = Console.ReadLine();
                 if(int.TryParse(input, out int result))
                 {

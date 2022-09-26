@@ -15,7 +15,7 @@ namespace Library.Data
 
         private List<Book> _books = new List<Book>();
 
-        public List<Book> Books { get { return _books; } }
+        public List<Book> Books { get { return _books; } } //added get access to book list for searching and removing
 
         public void Add(Book book)
         {
@@ -26,7 +26,6 @@ namespace Library.Data
         {
             _books.Remove(book);
         }
-
 
         private void Load()
         {
@@ -44,7 +43,7 @@ namespace Library.Data
                 Description = "Some description",
                 Rating = 5,
                 Genre = GenreEnum.Horror,
-                Authors = new List<Author>() { new Author("Nick") }.ToArray(),
+                Authors = new List<Author>() { new Author("Nick"), new Author("John", "Smith") }.ToArray(), //added more than one author for testing purposes
                 Keywords = new string[] { "Old", "England" }
             });
         }

@@ -10,15 +10,11 @@ namespace Library.ConsoleApp
 {
     internal class SearchHelper
     {
-        public static IEnumerable<Book> Start(BookLibrary bookLibrary)
+        public static void Start(BookLibrary bookLibrary)
         {
             var books = bookLibrary.Books;
-
-            var searchResults = Search(books);
-
-            DisplaySearchResults(searchResults);
-
-            return searchResults;
+            DisplaySearchResults(Search(books));
+            return;
         }
 
         public static IEnumerable<Book> Search(IEnumerable<Book> books)
@@ -39,7 +35,7 @@ namespace Library.ConsoleApp
                         result = SearchByAuthor(query, books).ToList();
                         break;
                     case "K":
-                        result = SearchByKeywords(query, books).ToList();
+                        result = SearchByKeyword(query, books).ToList();
                         break;
                     case "G":
                         result = SearchByGenre(query, books).ToList();
@@ -65,7 +61,7 @@ namespace Library.ConsoleApp
             }
         }
 
-        internal static string GetSearchModeSelection()
+        private static string GetSearchModeSelection()
         {
             while (true)
             {
@@ -113,7 +109,7 @@ namespace Library.ConsoleApp
             return books;
         }
 
-        private static IEnumerable<Book> SearchByKeywords(string query, IEnumerable<Book> books)
+        private static IEnumerable<Book> SearchByKeyword(string query, IEnumerable<Book> books)
         {
             return books.Where(b => b.Keywords.Any(x => x.Contains(query, StringComparison.InvariantCultureIgnoreCase)));
         }
@@ -122,6 +118,7 @@ namespace Library.ConsoleApp
         {
             return books.Where(b => b.Genre.ToString().Contains(query, StringComparison.InvariantCultureIgnoreCase));
         }
+
         private static IEnumerable<Book> SearchByDescription(string query, IEnumerable<Book> books)
         {
             return books.Where(b => b.Description.Contains(query, StringComparison.InvariantCultureIgnoreCase));
