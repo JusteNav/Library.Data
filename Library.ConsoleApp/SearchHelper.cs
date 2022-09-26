@@ -61,7 +61,7 @@ namespace Library.ConsoleApp
             Console.WriteLine("Results:");
             for (int i = 0; i < results.Count(); i++)
             {
-                Console.WriteLine($"{i + 1}. {results.ElementAt(i).ToString()}");
+                Console.WriteLine($"{i + 1}. {results.ElementAt(i).Title}");
             }
         }
 

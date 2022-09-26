@@ -84,7 +84,7 @@ namespace Library.ConsoleApp
         {
             while (true)
             {
-                Console.WriteLine($"Are you sure you want to delete {book.ToString()} [Y/N]?");
+                Console.WriteLine($"Are you sure you want to delete {book.Title} [Y/N]?");
                 switch (Console.ReadLine().ToUpper())
                 {
                     case "Y":
