@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Library.Data
 {
     public class Author
     {
+        public Author()
+        {
+
+        }
         public Author(string nickName)
         {
             NickName = nickName;
@@ -18,7 +23,6 @@ namespace Library.Data
             Name = name;
             Surname = surname;
         }
-
         public string Name { get; set; }
         public string Surname { get; set; }
         public string NickName { get; set; }

@@ -1,10 +1,16 @@
-﻿namespace Library.Data
+﻿using System.Xml.Serialization;
+
+namespace Library.Data
 {
     public class Book
     {
         public Book(string title)
         {
             Title = title;
+        }
+
+        public Book()
+        {
         }
 
         public string Title { get; set; }
@@ -23,6 +29,5 @@
         {
             return $"{Title}\n{Description}";
         }
-
     }
 }

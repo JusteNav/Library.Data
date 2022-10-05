@@ -27,8 +27,9 @@ namespace Library.ConsoleApp
 
             var keywords = GetKeywords();
 
-            var book = new Book(title)
+            var book = new Book()
             {
+                Title = title,
                 Description = description,
                 Genre = (GenreEnum)Enum.Parse(typeof(GenreEnum), genre),
                 Rating = byte.Parse(rating),

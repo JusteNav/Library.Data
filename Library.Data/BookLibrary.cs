@@ -20,6 +20,7 @@ namespace Library.Data
         public void Add(Book book)
         {
             _books.Add(book);
+            XMLBookHelper.Save(_books);
         }
 
         public void Remove(Book book)
@@ -29,23 +30,7 @@ namespace Library.Data
 
         private void Load()
         {
-            _books.Add(new Book("Test title")
-            {
-                Description = "Descriptiopn",
-                Rating = 3,
-                Genre = GenreEnum.ScienceFiction,
-                Authors = new List<Author>() { new Author("Nick") }.ToArray(),
-                Keywords = new string[] { "Old", "England" }
-            });
-
-            _books.Add(new Book("Horror one")
-            {
-                Description = "Some description",
-                Rating = 5,
-                Genre = GenreEnum.Horror,
-                Authors = new List<Author>() { new Author("Nick"), new Author("John", "Smith") }.ToArray(), //added more than one author for testing purposes
-                Keywords = new string[] { "Old", "England" }
-            });
+            _books.AddRange(XMLBookHelper.LoadBooks());
         }
     }
 }

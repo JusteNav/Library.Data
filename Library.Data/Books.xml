@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Books>
+	<Book>
+		<Title>Alice's Adventures in Wonderland</Title>
+		<Description>After a tumble down the rabbit hole, Alice finds herself far away from home in the absurd world of Wonderland.</Description>
+		<Authors>
+			<Author>
+				<Name>Lewis</Name>
+				<Surname>Carroll</Surname>
+			</Author>
+		</Authors>
+		<Genre>Fantasy</Genre>
+		<Keywords>
+			<string>Rabbit</string>
+			<string>Child</string>
+		</Keywords>		
+		<Rating>8</Rating>
+	</Book>
+	<Book>
+		<Title>Good Omens</Title>
+		<Description>People have been predicting the end of the world almost from its very beginning, so it’s only natural to be sceptical when a new date is set for Judgement Day. This time though, the armies of Good and Evil really do appear to be massing. The four Bikers of the Apocalypse are hitting the road. But both the angels and demons – well, one fast-living demon and a somewhat fussy angel – would quite like the Rapture not to happen.</Description>
+		<Authors>
+			<Author>
+				<Name>Terry</Name>
+				<Surname>Pratchett</Surname>
+			</Author>
+			<Author>
+				<Name>Neil</Name>
+				<Surname>Gaiman</Surname>
+				<NickName>Scary Trousers</NickName>
+			</Author>
+			<Author>
+				<NickName>
+					Somebody
+				</NickName>
+			</Author>
+		</Authors>
+		<Genre>Horror</Genre>
+		<Keywords>
+			<string>Angel</string>
+			<string>Apocalypse</string>
+		</Keywords>
+		<Rating>9</Rating>
+	</Book>
+	<Book>
+		<Title>It</Title>
+		<Description>It’s a small city, a place as hauntingly familiar as your own hometown. Only in Derry the haunting is real ...</Description>
+		<Authors>
+			<Author>
+				<Name>Stephen</Name>
+				<Surname>King</Surname>
+				<NickName>The King</NickName>
+			</Author>
+		</Authors>
+		<Genre>Horror</Genre>
+		<Keywords>
+			<string>Spooky</string>
+			<string>Clown</string>
+		</Keywords>
+		<Rating>8</Rating>
+	</Book>
+</Books>

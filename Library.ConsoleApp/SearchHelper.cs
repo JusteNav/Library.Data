@@ -45,7 +45,7 @@ namespace Library.ConsoleApp
                         break;
                 }
             }
-            if (result.Count() == 0)
+            if (!result.Any())
             {
                 Console.WriteLine("No results found!");
             }
@@ -105,10 +105,10 @@ namespace Library.ConsoleApp
                 a.Name != null && a.Name.Contains(query, StringComparison.InvariantCultureIgnoreCase) || 
                 a.Surname != null && a.Surname.Contains(query, StringComparison.InvariantCultureIgnoreCase)
                 select b;
-
+            books = books.Distinct<Book>();
             return books;
         }
-
+        
         private static IEnumerable<Book> SearchByKeyword(string query, IEnumerable<Book> books)
         {
             return books.Where(b => b.Keywords.Any(x => x.Contains(query, StringComparison.InvariantCultureIgnoreCase)));
